@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+}
+button {
+  background-color: #eae3db;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-weight: 800;
+  color: #3b4664;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 0.3rem;
+  width: 100%;
+  height: 80%;
+}
+body {
+  background-color: #3b4664;
+}
+#calcBody {
+  margin: 2%;
+  width: 30%;
+  aspect-ratio: 8/10;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 1fr;
+  gap: 2%;
+}
+#displayWindow {
+  background-color: #181f32;
+  border: none;
+  width: 100%;
+  padding: 3%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: end;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  caret-color: transparent;
+  outline: none;
+}
+#keypadWindow {
+  background-color: #252d44;
+  border-radius: 0.5rem;
+  display: flex;
+}
+#keyBlock {
+  margin: 5%;
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 5%;
+  grid-row-gap: 7%;
+}
+#num7 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+#num8 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+#num9 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+#delBtn {
+  grid-area: 1 / 4 / 2 / 5;
+}
+#num4 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+#num5 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+#num6 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+#addBtn {
+  grid-area: 2 / 4 / 3 / 5;
+}
+#num1 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+#num2 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+#num3 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+#subBtn {
+  grid-area: 3 / 4 / 4 / 5;
+}
+#dotBtn {
+  grid-area: 4 / 1 / 5 / 2;
+}
+#num0 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+#slashBtn {
+  grid-area: 4 / 3 / 5 / 4;
+}
+#multBtn {
+  grid-area: 4 / 4 / 5 / 5;
+}
+#resetBtn {
+  grid-area: 5 / 1 / 6 / 3;
+}
+#evalBtn {
+  grid-area: 5 / 3 / 6 / 5;
+  background-color: #d13f30;
+  color: white;
+}
+.blueGrey {
+  background-color: #647299;
+  color: white;
+}

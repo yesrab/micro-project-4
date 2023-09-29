@@ -1,10 +1,17 @@
-const ar1 = ["0.47", "69", "+", "11", "*", "79", "/"];
+const arr = ["0.47", "69", "+", "11", "*", "79", "/"];
+
+console.log(evalRPN(arr));
+
+//integer check
 function isInteger(str) {
   return /^[-+]?\d+$/.test(str);
 }
+
+//float check
 function isFloat(str) {
   return /^[-+]?\d+(\.\d+)?$/.test(str);
 }
+//calc function
 function evalRPN(array) {
   const stack = [];
   const operators = {
@@ -38,4 +45,11 @@ function evalRPN(array) {
   return Math.round(stack.pop() * 1000) / 1000;
 }
 
-console.log(evalRPN(ar1));
+const displayArea = document.getElementById("displayWindow");
+let btns = document.querySelectorAll("button");
+
+for (i of btns) {
+  i.addEventListener("click", function () {
+    console.log(this.id);
+  });
+}
