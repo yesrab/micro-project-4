@@ -134,7 +134,11 @@ for (i of btns) {
         break;
       }
       case "delBtn": {
-        if (displayArea.value == "Infinity" || displayArea.value == "NaN") {
+        if (
+          displayArea.value == "Infinity" ||
+          displayArea.value == "NaN" ||
+          displayArea.value == "ERROR"
+        ) {
           displayArea.value = "";
         } else {
           displayArea.value = displayArea.value.slice(0, -1);
@@ -155,7 +159,7 @@ for (i of btns) {
           if (validateExpression(validOut)) {
             displayArea.value = evalRPN(SYA(validOut));
           } else {
-            displayArea.value = "invalid expression";
+            displayArea.value = "ERROR";
           }
           displayArea.scrollLeft = 100000;
         } else {
