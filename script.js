@@ -1,7 +1,3 @@
-const arr = ["33", "29", "*", "4", "+"];
-
-console.log(evalRPN(arr));
-
 //integer check
 function isInteger(str) {
   return /^[-+]?\d+$/.test(str);
@@ -53,67 +49,56 @@ for (i of btns) {
     // console.log("val", this.value);
     switch (this.id) {
       case "num1": {
-        console.log("number 1 btn");
         displayArea.value += "1";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num2": {
-        console.log("number 2 btn");
         displayArea.value += "2";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num3": {
-        console.log("number 3 btn");
         displayArea.value += "3";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num4": {
-        console.log("number 4 btn");
         displayArea.value += "4";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num5": {
-        console.log("number 5 btn");
         displayArea.value += "5";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num6": {
-        console.log("number 6 btn");
         displayArea.value += "6";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num7": {
-        console.log("number 7 btn");
         displayArea.value += "7";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num8": {
-        console.log("number 8 btn");
         displayArea.value += "8";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num9": {
-        console.log("number 9 btn");
         displayArea.value += "9";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "num0": {
-        console.log("number 0 btn");
         displayArea.value += "0";
         displayArea.scrollLeft = 100000;
         break;
       }
       case "addBtn": {
-        console.log("+ operator");
         if (displayArea.value.trim() !== "") {
           displayArea.value += "+";
           displayArea.scrollLeft = 100000;
@@ -121,7 +106,6 @@ for (i of btns) {
         break;
       }
       case "subBtn": {
-        console.log("- operator");
         if (displayArea.value.trim() !== "") {
           displayArea.value += "-";
           displayArea.scrollLeft = 100000;
@@ -129,7 +113,6 @@ for (i of btns) {
         break;
       }
       case "multBtn": {
-        console.log("* operator");
         if (displayArea.value.trim() !== "") {
           displayArea.value += "*";
           displayArea.scrollLeft = 100000;
@@ -137,7 +120,6 @@ for (i of btns) {
         break;
       }
       case "slashBtn": {
-        console.log("/ operator");
         if (displayArea.value.trim() !== "") {
           displayArea.value += "/";
           displayArea.scrollLeft = 100000;
@@ -145,7 +127,6 @@ for (i of btns) {
         break;
       }
       case "dotBtn": {
-        console.log(". button");
         if (displayArea.value.trim() !== "") {
           displayArea.value += ".";
           displayArea.scrollLeft = 100000;
@@ -153,7 +134,6 @@ for (i of btns) {
         break;
       }
       case "delBtn": {
-        console.log("Del button");
         if (displayArea.value == "Infinity" || displayArea.value == "NaN") {
           displayArea.value = "";
         } else {
@@ -163,12 +143,10 @@ for (i of btns) {
         break;
       }
       case "resetBtn": {
-        console.log("Reset button");
         displayArea.value = "";
         break;
       }
       case "evalBtn": {
-        console.log("= button");
         // console.log(eval(displayArea.value));
         console.log(parseString(displayArea.value));
         const validOut = parseString(displayArea.value);
@@ -262,6 +240,5 @@ function SYA(array) {
     queue.push(stack.pop());
   }
 
-  console.log(queue);
   return queue;
 }
