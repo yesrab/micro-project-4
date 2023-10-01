@@ -47,6 +47,8 @@ body {
   font-weight: 700;
   caret-color: transparent;
   outline: none;
+  text-size-adjust: auto;
+  cursor: pointer;
 }
 #keypadWindow {
   background-color: #252d44;
