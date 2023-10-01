@@ -126,3 +126,13 @@ body {
   background-color: #647299;
   color: white;
 }
+
+@media only screen and (max-width: 600px) {
+  #calcBody {
+    width: 90%;
+  }
+
+  #displayWindow {
+    font-size: 2em;
+  }
+}
