@@ -148,15 +148,19 @@ for (i of btns) {
       }
       case "evalBtn": {
         // console.log(eval(displayArea.value));
-        console.log(parseString(displayArea.value));
-        const validOut = parseString(displayArea.value);
-        console.log(validateExpression(validOut));
-        if (validateExpression(validOut)) {
-          displayArea.value = evalRPN(SYA(validOut));
+        if (displayArea.value !== "") {
+          console.log(parseString(displayArea.value));
+          const validOut = parseString(displayArea.value);
+          console.log(validateExpression(validOut));
+          if (validateExpression(validOut)) {
+            displayArea.value = evalRPN(SYA(validOut));
+          } else {
+            displayArea.value = "invalid expression";
+          }
+          displayArea.scrollLeft = 100000;
         } else {
-          displayArea.value = "invalid expression";
+          displayArea.value = "";
         }
-        displayArea.scrollLeft = 100000;
         break;
       }
     }
